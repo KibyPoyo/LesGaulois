@@ -33,6 +33,9 @@ public class Gaulois {
 	}
 	
 	public static void main(String[] args) {
-		// TODO
+		Gaulois asterix = new Gaulois("Asterix",8);
+		Romain minus = new Romain("Minus",5);
+		asterix.parler("J'ai une force de " + asterix.force + " !");
+		asterix.frapper(minus);
 	}
 }
