@@ -1,7 +1,5 @@
 package personnages;
 
-import java.util.Iterator;
-
 public class Village {
 	private String nom;
 	private Chef chef;
@@ -33,7 +31,7 @@ public class Village {
 	}
 	
 	public void afficherVillageois() {
-		System.out.println("Dans le " + nom + " du chef " + chef + " vivent les legendaires Gaulois :");
+		System.out.println("Dans le " + nom + " du chef " + chef.getNom() + " vivent les legendaires Gaulois :");
 		for (int i = 0; i < villageois.length; i++) {
 			if( villageois[i] != null) {
 				System.out.println("- " + villageois[i].getNom());
@@ -47,13 +45,14 @@ public class Village {
 //		L'inststruction ci-dessus cherche un habitant en dehors du tableau des habitants
 //		Il y a bien 30 places dans ce village mais allant des indices 0 a 29 (inclus)
 		Chef abraracourcix = new Chef("Abraracourcix",6,monVillage);
+		monVillage.setChef(abraracourcix);
 		
 		Gaulois asterix = new Gaulois("Asterix",8);
 		monVillage.ajouterHabitant(asterix);
 		
 //		Gaulois gaulois = monVillage.trouverHabitant(1);
 //		System.out.println(gaulois);
-//		On cherche le gaulois à l'emplacement numero 1, or on a place asterix a l'element 0
+//		On cherche le gaulois a l'emplacement numero 1, or on a place asterix a l'element 0
 //		On obtient alors un resultat indetermine, ici <null>
 		
 		Gaulois obelix = new Gaulois("Obelix",25);
