@@ -33,7 +33,7 @@ public class Village {
 	public void afficherVillageois() {
 		System.out.println("Dans le " + nom + " du chef " + chef.getNom() + " vivent les legendaires Gaulois :");
 		for (int i = 0; i < villageois.length; i++) {
-			if( villageois[i] != null) {
+			if(villageois[i] != null) {
 				System.out.println("- " + villageois[i].getNom());
 			}
 		}
