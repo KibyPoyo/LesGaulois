@@ -43,34 +43,19 @@ public class Romain {
 				break;
 			}
 			case 1: {
-				if (equipement == Equipement.CASQUE) {
-					if (equipements[0] == Equipement.CASQUE || equipements[1] == Equipement.CASQUE) {
-						System.out.println("Le soldat " + nom + " possede deja un casque !");
-					} else {
-						equipements[1] = equipement;
-						nbEquipements++;
-						System.out.println("Le soldat " + nom + " s'equipe avec un casque !");
-					}
-				}
-				else if (equipements[0] == Equipement.BOUCLIER || equipements[1] == Equipement.BOUCLIER) {
-						System.out.println("Le soldat " + nom + " possede deja un bouclier !");
-					} else {
-						equipements[1] = equipement;
-						nbEquipements++;
-						System.out.println("Le soldat " + nom + " s'equipe avec un bouclier !");
-					}
-				break;
-			}
-			case 0: {
-				if (equipement == Equipement.CASQUE) {
-					equipements[0] = equipement;
-					nbEquipements++;
-					System.out.println("Le soldat " + nom + " s'equipe avec un casque !");
+				if (equipements[0] == equipement) {
+					System.out.println("Le soldat " + nom + " possede deja un " + equipement.getNom() + " !");
 				} else {
 					equipements[1] = equipement;
 					nbEquipements++;
-					System.out.println("Le soldat " + nom + " s'equipe avec un bouclier !");
+					System.out.println("Le soldat " + nom + " s'equipe avec un " + equipement.getNom() + " !");
 				}
+				break;
+			}
+			case 0: {
+				equipements[0] = equipement;
+				nbEquipements++;
+				System.out.println("Le soldat " + nom + " s'equipe avec un " + equipement.getNom() + " !");
 				break;
 			}
 			default:
