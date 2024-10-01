@@ -5,9 +5,9 @@ import personnages.Gaulois;
 
 public class Trophee {
 	private Gaulois gaulois;
-	private Equipement[] equipement;
+	private Equipement equipement;
 	
-	public Trophee(Gaulois gaulois, Equipement[] equipement) {
+	public Trophee(Gaulois gaulois, Equipement equipement) {
 		this.gaulois = gaulois;
 		this.equipement = equipement;
 	}
@@ -16,7 +16,7 @@ public class Trophee {
 		return gaulois;
 	}
 
-	public Equipement[] getEquipement() {
+	public Equipement getEquipement() {
 		return equipement;
 	}
 	

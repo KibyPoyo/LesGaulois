@@ -10,7 +10,7 @@ public class Romain {
 	public Romain(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
-		assert invariantForcePositive(force);
+		invariantForcePositive(force);
 	}
 
 	public String getNom() {
@@ -60,7 +60,7 @@ public class Romain {
 			parler("J'abandonne...");
 		}
 		
-		assert (force < oldForce || vainqueur); // Post-condition
+		assert (force < oldForce ^ vainqueur); // Post-condition (^ == x or)
 		return equipementEjecte;
 	}
 
