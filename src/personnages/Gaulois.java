@@ -24,16 +24,6 @@ public class Gaulois {
 		System.out.println(prendreParole() + "<< " + texte + " >>");
 	}
 	
-//	AVANT TP3
-//	private String prendreParole() {
-//		return "Le gaulois " + nom + " : ";
-//	}
-//	
-//	public void frapper(Romain romain) {
-//		System.out.println(nom + " envoie un grand coup dans la machoire de " + romain.getNom());
-//		romain.recevoirCoup( (force / 3) * effetPotion);
-//	}
-	
 	private String prendreParole() {
 		return "Le gaulois " + nom + " : ";
 	}
@@ -60,8 +50,9 @@ public class Gaulois {
 	public void faireUneDonnation(Musee musee) {
 		String texte = "";
 		for (int i = 0; trophees[i] != null && i < trophees.length; i++) {
-			musee.donnerTrophee(this,trophees[i]);
-			texte += ("\n- " + trophees[i].getEquipement().getNom());
+			musee.donnerTrophee(trophees[i]);
+			Equipement equipement = trophees[i].getEquipement();
+			texte += ("\n- " + equipement.getNom());
 		}
 		if ("".equals(texte)) {
 			parler("Je n'ai pas de trophees a donner au musee...");

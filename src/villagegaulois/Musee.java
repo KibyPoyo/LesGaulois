@@ -1,12 +1,12 @@
 package villagegaulois;
 
-import personnages.Gaulois;
+import personnages.Equipement;
 
 public class Musee {
 	private Trophee[] trophees = new Trophee[200];
 	private int nbTrophees = 0;
 	
-	public void donnerTrophee(Gaulois gaulois, Trophee trophee) {
+	public void donnerTrophee(Trophee trophee) {
 		trophees[nbTrophees] = trophee;
 		nbTrophees++;
 	}
@@ -16,9 +16,10 @@ public class Musee {
 		
 		instructionsBuilder.append("let musee = [\n");
 		for (int i = 0; i < nbTrophees; i++) {
+			Equipement equipement = trophees[i].getEquipement();
 			instructionsBuilder.append("\t\"" + trophees[i].donnerNom() + "\", \"" +
-										trophees[i].getEquipement().getNom() + "\"");
-			if (i == nbTrophees) {
+										equipement.getNom() + "\"");
+			if (i == nbTrophees-1) {
 				instructionsBuilder.append("\n");
 			} else {
 				instructionsBuilder.append(";\n");

@@ -86,7 +86,6 @@ public class Romain {
 	private Equipement[] ejecterEquipement() {
 		Equipement[] equipementEjecte = new Equipement[nbEquipements];
 		System.out.println("L'equipement de " + nom + " s'envole sous la force du coup.");
-		// TODO
 		int nbEquipementEjecte = 0;
 		for (int i = 0; i < nbEquipements; i++) {
 			if (equipements[i] != null) {
@@ -97,20 +96,7 @@ public class Romain {
 		}
 		return equipementEjecte;
 	}
-
-//	AVANT TP3
-//	public void recevoirCoup(int forceCoup) {
-//		assert force > 0;
-//		int forceAvantCoup = force;
-//		force -= forceCoup;
-//		if (force > 0) {
-//			parler("Aie");
-//		} else {
-//			parler("J'abandonne...");
-//		}
-//		assert forceAvantCoup > force;
-//	}
-
+	
 	public void sEquiper(Equipement equipement) {
 		String debutTexte = "Le soldat ";
 		switch (nbEquipements) {
